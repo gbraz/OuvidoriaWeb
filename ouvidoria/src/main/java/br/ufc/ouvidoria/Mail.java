@@ -12,7 +12,7 @@ import javax.mail.internet.MimeMessage;
 
 public class Mail {
 	
-	public void sendMail(String Text, String subject,String from, String to){
+	public void sendMail(String text, String subject,String from, String to){
 		Properties properties = createProperties();
 		Session session = createSession(properties);
 		
@@ -24,7 +24,7 @@ public class Mail {
 		               InternetAddress.parse(to));
 		  
 		  message.setSubject(subject);
-		  message.setText(Text);
+		  message.setText(text);
 
 		  Transport.send(message);
 		  
